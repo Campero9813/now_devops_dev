@@ -1,0 +1,25 @@
+/* boton regresar */
+
+.boton-regresar {
+  padding-top: 4.5rem;
+  margin-bottom: -5rem;
+}
+.boton-regresar a span{
+  font-size: 50px;
+}
+
+/* CARDS */
+
+.button-cards {
+  background-color: #0B5ED7;
+  /* Green */
+  border-radius: 8px;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  margin: 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

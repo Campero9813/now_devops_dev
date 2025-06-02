@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="ajustar-carrito">
+        <nav class="navbar navbar-expand-md ">
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="mr-auto dropstart">
+                    <li id="cart" class="cart" data-totalitems="0">
+                        <a (click)="verCarrito()" class="rk-menu__link nav-link dropdown-toggle " height="70px" width="70px" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-shopping-cart "></i>
+                        </a>
+                        <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                            <table id="lista-carrito" class="table">
+                                <!-- <div *ngIf="mostrarInformacion">
+                                    <p>{{ informacionCarrito }}</p>
+                                </div> -->
+
+                                <!--  <ul>
+                                    <li *ngFor="let producto of productos">{{ producto }}</li>
+                                </ul> -->
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
+                                        <th>#Numero</th>
+                                    </tr>
+                                </thead>
+                                <!-- <tbody *ngFor="let item of informacion">
+                                    <td>{{item.imagen}}</td>
+                                    <td>{{item.nombre}}</td>
+                                    <td>{{item.precio}}</td>
+                                    <td>{{item.cantidad}}</td>
+                                    <td>{{item.length}}</td>
+                                </tbody> -->
+                            </table>
+
+                            <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+                            <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar Compra</a>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->

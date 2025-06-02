@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /*--lateral-bg: #16a085;*/
+    --lateral-bg: #0D979A;
+    --lateral-gray-bg: #6C7A89;
+    --active: #f39c12;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.lateral {
+    background-color: #0D979A;
+    background-color: var(--lateral-bg);
+    box-shadow: 2px 0 2px 0 rgba(0, 0, 0, .15);
+    display: flex;
+    flex: 0 0 250px;
+    flex-direction: column;
+    position: relative;
+}
+
+.lateral #toggler {
+    color: rgba(255, 255, 255, .85);
+    cursor: pointer;
+    left: 10px;
+    position: absolute;
+    top: 10px;
+}
+
+.lateral #toggler i {
+    display: none;
+}
+
+.lateral #toggler #hide {
+    font-size: 32px;
+}
+
+.lateral .brand {
+    align-items: center;
+    display: flex;
+    flex: 0 0 70px;
+    justify-content: center;
+}
+
+.lateral .brand .brand-icon {
+    height: 40px;
+    margin: 0;
+    width: 40px;
+}
+
+.lateral .brand .brand-icon img {
+    height: 100%;
+    width: 100%;
+}
+
+.lateral .user-panel {
+    align-items: center;
+    display: flex;
+    flex: 0 0 100px;
+    padding: 0 15px;
+}
+
+.lateral .user-panel .user-avatar {
+    height: 70px;
+    margin: 0;
+    min-width: 70px;
+    width: 70px;
+}
+
+.lateral .user-panel .user-avatar img {
+    border-radius: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+.lateral .user-panel .user-info {
+    padding-left: 10px;
+    width: 100%;
+}
+
+.lateral .user-panel .user-info span {
+    color: rgba(255, 255, 255, .65);
+    display: block;
+    font-family: 'Open Sans';
+    padding: 4px 0;
+}
+
+.lateral .user-panel .user-info span.user-name {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-weight: 600;
+    overflow: hidden;
+    transition: all .2s ease;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.lateral .user-panel .user-info span.user-name #arrow {
+    font-size: 12px;
+    margin-left: 5px;
+    transition: all .2s ease;
+}
+
+.lateral .user-panel .user-info span.user-name:hover,
+.lateral .user-panel .user-info span.user-name:hover>#arrow {
+    color: rgba(255, 255, 255, .9);
+}
+
+.lateral .user-panel .user-info span.user-role {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.lateral .navigation {
+    flex: 1;
+}
+
+.lateral .navigation .title {
+    color: rgba(255, 255, 255, .65);
+    display: block;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+
+.lateral .navigation .menu {
+    list-style: none;
+    padding: 0;
+}
+
+.lateral .navigation .menu li {
+    display: block;
+}
+
+.lateral .navigation .menu li a {
+    align-items: center;
+    border-left: 3px solid transparent;
+    color: rgba(255, 255, 255, .65);
+    display: flex;
+    font-family: 'Open Sans';
+    font-size: 15px;
+    font-weight: 600;
+    height: 45px;
+    padding: 0 15px 0 15px;
+    transition: all .2s ease;
+    text-decoration: none;
+}
+
+.lateral .navigation .menu li a span {
+    margin-left: 10px;
+}
+
+.lateral .navigation .menu li a:before {
+    content: "\2022";
+    margin-right: 12px;
+    opacity: 0;
+    transition: all .2s ease;
+    visibility: hidden;
+}
+
+.lateral .navigation .menu li a.active {
+    color: rgba(255, 255, 255, 1);
+}
+
+.lateral .navigation .menu li a.active:before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lateral .navigation .menu li a:not(.active):hover {
+    color: rgba(255, 255, 255, .85);
+}
+
+.lateral .lateral-options {
+    align-items: center;
+    border-top: 2px solid rgba(255, 255, 255, .25);
+    flex: 0 0 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.lateral .lateral-options span {
+    color: rgba(255, 255, 255, .6);
+    font-family: 'Open Sans';
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.lateral .lateral-options a {
+    align-items: center;
+    color: rgba(255, 255, 255, .7);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    flex: 0 0 calc(100% / 3);
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+.lateral .lateral-options a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.lateral .lateral-options a:first-of-type {
+    background-color: #34495e;
+}
+
+.lateral .lateral-options a:nth-child(2) {
+    background-color: #e74c3c;
+}
+
+.lateral .lateral-options a:last-of-type {
+    background-color: #95a5a6;
+}
+
+.settings {
+    background-color: rgb(13, 126, 128);
+    flex: 0 0 60px;
+}
+
+.settings a {
+    align-items: center;
+    color: rgba(255, 255, 255, .7);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+.settings a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.settings a:first-of-type {
+    background-color: #34495e;
+}
+
+.settings a:nth-child(2) {
+    background-color: #e74c3c;
+}
+
+.settings a:last-of-type {
+    background-color: #95a5a6;
+}
+
+.content {
+    flex: 1;
+}
+
+.content #notificator {
+    align-items: center;
+    background-color: #7f8c8d;
+    border-radius: 100%;
+    box-shadow: 3px 0 3px 0 rgba(0, 0, 0, .15), 0 4px 2px 0 rgba(0, 0, 0, .15);
+    color: rgba(255, 255, 255, .9);
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    position: fixed;
+    right: 15px;
+    top: 12px;
+    width: 40px;
+}
+
+.content #notificator>i {
+    font-size: 28px;
+}
+
+.input {
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    color: #555;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    margin: 50px 0 0 20px;
+    padding: 8px;
+    transition: all .2s ease;
+}
+
+.input:focus {
+    border-color: rgba(0, 100, 255, .4);
+    outline: none;
+}

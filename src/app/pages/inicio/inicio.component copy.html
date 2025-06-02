@@ -1,0 +1,212 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<section class="">
+  <div>
+    <!-- Loading -->
+
+    <!-- <div style="padding-top: 12rem;" align="center" *ngIf="prodsNow.cargando">
+    <h2>Cargando...</h2>
+
+    <div class="loader loader--style1" title="0">
+      <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+        <path opacity="0.2" fill="#000"
+          d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z" />
+        <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0C22.32,8.481,24.301,9.057,26.013,10.047z">
+          <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="0.5s" repeatCount="indefinite" />
+        </path>
+      </svg>
+    </div>
+  </div> -->
+    <!-- End Loading -->
+
+
+
+    <!-- banners -->
+    <div id="carouselExampleIndicators" class="responsive-main carousel slide" style="margin-top: 8rem; margin-bottom: 1rem">
+
+      <div class="comunicate-con-nosotros">
+        <a [href]="WhatsappUrl" target="_blank">
+          <img src="./assets/img/Comunicate-con-nosotros.png" alt="Ícono de comunicación" class="comunicate-con-nosotros-img">
+        </a>
+      </div>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+          aria-label="Slide 4"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="https://maps.app.goo.gl/hECxc9AyNataBEd19" target="_blank">
+            <img src="./assets/img/banners/banner_home/banner-home-0.jpg " class="d-block w-100" alt="..." />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/img/banners/banner_home/banner-home.png " class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/img/banners/banner_home/banner-home-2.png" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/img/banners/banner_home/banner-home-3.png " class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- End banners -->
+    <!-- Animacion -->
+    <div class="text-main centrar">
+      <div class="animacion titulo" [ngClass]="{'animate__animated animate__fadeInBottomLeft': animateTitle}">
+        <h1 class='elegantshadow'>Conoce Nuestras Categorias</h1>
+      </div>
+
+    </div>
+    <!-- <h1>Conoce nuestras Categorias</h1> -->
+    <!-- End Animacion -->
+
+    <!-- Section Categorias -->
+
+    <section class="cards-categorias">
+      <div class="section-gallery">
+        <div class="imagenes ae-grid">
+          <div class="ae-grid__item item-lg--auto" [ngClass]="{'animate__animated animate__fadeInLeft': animateTitle}">
+            <a routerLink="/pisos" class="rk-item">
+              <img src="./assets/productos_now/Categorias/pisos.png">
+              <div class="item-meta">
+                <h2>Limpieza de Pisos</h2>
+              </div>
+            </a>
+          </div>
+          <div class="ae-grid__item item-lg--auto" [ngClass]="{'animate__animated animate__fadeInRight': animateTitle}">
+            <a routerLink="/ropa" class="rk-item">
+              <img src="./assets/productos_now/Categorias/ropa.png" alt="">
+              <div class="item-meta">
+                <h2>Cuidado de la Ropa</h2>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="imagenes ae-grid">
+          <div class="ae-grid__item item-lg--auto" [ngClass]="{'animate__animated animate__fadeInLeft': animateTitle}">
+            <a routerLink="/superficies" class="rk-item">
+              <img src="./assets/productos_now/Categorias/superficies.png" alt="">
+              <div class="item-meta">
+                <h2>Limpieza de Superficies</h2>
+              </div>
+            </a>
+          </div>
+          <div class="ae-grid__item item-lg--auto" [ngClass]="{'animate__animated animate__fadeInRight': animateTitle}">
+            <a routerLink="/especialidades" class="rk-item">
+              <img src="./assets/productos_now/Categorias/especialidades.png" alt="">
+              <div class="item-meta">
+                <h2>Limpiadores de Especialidades</h2>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="video-section">
+      <!-- video 1 -->
+      <div id="carouselExampleIndicators" class="video-main carousel slide" style="margin-bottom: 2rem">
+        <div class="carousel-indicators"></div>
+        <div class="carousel-inner">
+          <div>
+            <!-- <iframe width="100%" height="1080" src="https://www.youtube.com/watch?v=W0AghNoT7-Q&ab_channel=ProductosInnovador" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+            <iframe width="100%" height="1080" src="https://www.youtube.com/embed/CwsQNMoyXh8?si=p_GuSCW1a9jx6bKt"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <!-- End video 1 -->
+    </section>
+    <section class="cards-categorias">
+      <div class="section-gallery">
+        <div class="imagenes ae-grid">
+          <div class="ae-grid__item item-lg--auto" [ngClass]="{'animate__animated animate__fadeInLeft': animateTitle}">
+            <a routerLink="/mirachem" class="rk-item">
+              <img src="./assets/productos_now/Categorias/alta-especialidad.png" alt="">
+              <div class="item-meta">
+                <h2>Alta Especialidad</h2>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- </section> -->
+    <!-- End Section Categorias -->
+
+
+    <section class="video-section">
+
+      <!-- video 1 -->
+      <div id="carouselExampleIndicators" class="video-main carousel slide" style="margin-bottom: 2rem">
+        <div class="carousel-indicators"></div>
+        <div class="carousel-inner">
+          <div>
+            <!-- <iframe width="100%" height="1080" src="https://www.youtube.com/watch?v=W0AghNoT7-Q&ab_channel=ProductosInnovador" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+            <iframe width="100%" height="1080" src="https://www.youtube.com/embed/Acx8lJcHq9o?si=NQXs3JRAyd8_4-Ze"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <!-- End video 1 -->
+
+
+      <!-- video 1 -->
+      <div id="carouselExampleIndicators" class="video-main carousel slide" style="margin-bottom: 2rem">
+        <div class="carousel-indicators"></div>
+        <div class="carousel-inner">
+          <div>
+            <!-- <iframe width="100%" height="1080" src="https://www.youtube.com/watch?v=W0AghNoT7-Q&ab_channel=ProductosInnovador" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+            <iframe width="100%" height="1080" src="https://www.youtube.com/embed/6UwOofGFOqc?si=XWI2IgEGfeaBLepe"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <!-- End video 1 -->
+    </section>
+
+
+    <!-- Banner 2 -->
+    <div id="carouselExampleIndicators" class="responsive-main carousel slide" style="margin-bottom: 4rem">
+      <div class="carousel-indicators"></div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./assets/img/banners/banner_home/banner-home-4.png" class="d-block w-80" alt="... " />
+        </div>
+      </div>
+    </div>
+    <!-- End Banner 2 -->
+
+    <app-chatbot></app-chatbot>
+
+    <div class="fixed-corner">
+      <a [href]="WhatsappUrl" target="_blank">
+        <img src="./assets/img/whatsapp_icon.png">
+      </a>
+
+    </div>
+  </div>
+</section>

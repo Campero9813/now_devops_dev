@@ -1,0 +1,240 @@
+*,
+*::before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/*=============================
+SVGS DE FONDO
+=============================*/
+
+.planeacion .svg.grafico {
+    background-image: url('https://gutierrezedgar.com/binncorp/img/grafico-planeacion.svg');
+}
+
+
+/*=============================
+ESTILOS GENERALES
+=============================*/
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.grupo.enlinea {
+    display: inline-block;
+    vertical-align: middle;
+    width: 70%;
+    width: calc(100% - 6.5rem);
+}
+
+.grupo .titulo {
+    position: relative;
+}
+
+
+/*=============================
+CONTENIDO
+=============================*/
+
+.seccion .grupo.introduccion {
+    text-align: justify;
+}
+
+.seccion {
+    padding: 3em 5% 5em;
+    padding: 3vmin 5% 5vmin;
+    display: inline-block;
+    max-width: 1600px;
+    width: 100%;
+}
+
+.introduccion .titulo {
+    font-weight: 600;
+    font-size: 2.6em;
+    line-height: 1em;
+    padding: 1em 0;
+    position: relative;
+    margin-bottom: 0.5em;
+}
+
+.introduccion p {
+    padding: 1em 0;
+    font-size: 1.4em;
+}
+
+.titulo.centrado {
+    text-align: center;
+}
+
+.contenido .grupo.contenido {
+    padding-top: 2em;
+    padding-top: 3vmin;
+}
+
+.icon-container {
+    width: 4em;
+    padding: 1em 0;
+}
+
+.grupo.contenido .titulo {
+    font-size: 1.2em;
+    line-height: 1em;
+    padding: 1em 0em;
+    font-weight: 500;
+    text-align: left;
+}
+
+.grupo.contenido .titulo~p {
+    padding: .5em 2em 0.5em 0;
+    text-align: justify;
+    font-weight: 300;
+}
+
+.seccion {
+    max-width: 100%;
+    padding: 0;
+    position: relative;
+}
+
+.quienes-somos blockquote {
+    text-align: left;
+    font-size: 1.6em;
+    font-style: italic;
+}
+
+.quienes-somos blockquote footer {
+    text-align: right;
+    display: inline-block;
+    width: 100%;
+}
+
+.quienes-somos blockquote cite {
+    font-weight: 600;
+    font-size: 0.85em;
+}
+
+.quienes-somos .introduccion .grupo {
+    width: 55%;
+}
+
+.quienes-somos .introduccion .grupo.imagen {
+    width: 44%;
+    height: 50vmin;
+    margin: 5vmin 0;
+}
+
+.quienes-somos .logo.binncorp {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.seccion.quienes-somos {
+    max-width: 100%;
+    padding: 3em 0;
+}
+
+.quienes-somos>.grupo {
+    padding: 0 10%;
+}
+
+.grupo.mision-vision {
+    font-size: 1.5em;
+    padding: 8vh 10% 8vh 50%;
+    position: relative;
+}
+
+.grupo.mision-vision .titulo {
+    font-size: 1.7em;
+    font-weight: 600;
+    padding: .5em 0;
+}
+
+.grupo.mision-vision p {
+    padding-left: 0;
+}
+
+.mision-vision .sub.grupo {
+    text-align: justify;
+    padding: 1em 0;
+}
+
+.mision-vision .imagen,
+.mision-vision .ilustracion {
+    position: absolute;
+    left: 0;
+    top: 2.5%;
+    height: 95%;
+}
+
+.mision-vision .imagen {
+    width: 45%;
+}
+
+.mision-vision .ilustracion {
+    width: 100%;
+}
+
+.mision-vision .titulo .decoracion {
+    width: 1.5em;
+    box-shadow: 2.5em 0 rgb(151, 190, 19);
+}
+
+.mision-vision .titulo .decoracion::before {
+    left: 1.8em;
+}
+
+
+/*---------------------INDICADORES*/
+
+@media (max-width: 960px) {
+    .menu {
+        font-size: 0.9em;
+    }
+    .logo {
+        width: 4rem;
+    }
+    .indicador {
+        width: 50%;
+        font-size: 0.8rem;
+    }
+    .inicio .banner {
+        padding: 10vmin 1em;
+    }
+    .banner .titulo {
+        font-size: 2.5em;
+        font-size: 9vmin;
+    }
+}
+
+@media (max-width: 700px) {
+    .indicador {
+        width: 100%;
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .pie-de-pagina .grupo,
+    .encabezado .navegacion {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .banner {
+        padding: 18vmin 10%;
+    }
+    .seccion {
+        padding: 5vmin 5% 12vmin;
+    }
+    .seccion.planeacion {
+        padding: 12vmin 5%;
+        min-height: 95vh;
+    }
+}

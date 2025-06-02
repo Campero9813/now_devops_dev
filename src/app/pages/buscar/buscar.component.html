@@ -1,0 +1,71 @@
+<div style="padding-top: 10rem;" class="boton-regresar">
+  <a (click)="goBack()" class="btn button-cards">Regresar
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z" />
+    </svg>
+  </a>
+</div>
+
+<!-- <div class="card-group">
+  <div class="card">
+    <div *ngFor="let product of pruebas1.prodsFiltrados">
+      <img [routerLink]="['/producto', product.id_producto]" class="card-img-top" src="./assets/productos_now/{{product.categoria}}/{{product.nombre_carpeta}}/{{product.imagen_principal}}" />
+      <div class="card-body">
+        <h5 class="card-title">{{ product.nombre_producto }}</h5>
+        <p class="card-text">{{ product.descripcion_corta }}</p>
+        <p class="card-text">
+          <small class="text-muted">Precio ${{ product.precio }}</small>
+        </p>
+        <p class="card-text">
+          <small class="text-muted">{{ product.categoria }}</small>
+        </p>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- <ul class="list-group">
+  <li *ngFor="let product of pruebas1.prodsFiltrados" class="list-group-item">
+    <img [routerLink]="['/producto', product.id_producto]" class="img-fluid" src="./assets/productos_now/{{product.categoria}}/{{product.nombre_carpeta}}/{{product.imagen_principal}}" />
+    <div class="d-flex justify-content-between align-items-center">
+      <div>
+        <h5 class="mb-1">{{ product.nombre_producto }}</h5>
+        <p class="mb-1">{{ product.descripcion_corta }}</p>
+        <p class="mb-1"><small class="text-muted">Precio ${{ product.precio }}</small></p>
+        <p class="mb-0"><small class="text-muted">{{ product.categoria }}</small></p>
+      </div>
+
+    </div>
+  </li>
+</ul> -->
+<!-- <div class="row">
+  <div *ngFor="let product of pruebas1.prodsFiltrados" class="col-md-6 mb-2">
+    <div class="card">
+      <img [routerLink]="['/producto', product.id_producto]" class="card-img-top" src="./assets/productos_now/{{product.categoria}}/{{product.nombre_carpeta}}/{{product.imagen_principal}}" />
+      <div class="card-body">
+        <h5 class="card-title">{{ product.nombre_producto }}</h5>
+        <p class="card-text">{{ product.descripcion_corta }}</p>
+        <p class="card-text">
+          <small class="text-muted">{{ product.categoria }}</small>
+        </p>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="row">
+  <div *ngFor="let product of pruebas1.prodsFiltrados" class="col-md-6">
+    <div class="card my-3">
+      <img [routerLink]="['/producto', product.id_producto]" class="card-img-top" src="./assets/productos_now/{{product.categoria}}/{{product.nombre_carpeta}}/{{product.imagen_principal}}" />
+      <div class="card-body">
+        <h5 class="card-title">{{ product.nombre_producto }}</h5>
+        <p class="card-text">{{ product.descripcion_corta }}</p>
+        <p class="card-text">
+          <small class="text-muted">Precio ${{ product.precio }}</small>
+        </p>
+        <p class="card-text">
+          <small class="text-muted">{{ product.categoria }}</small>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

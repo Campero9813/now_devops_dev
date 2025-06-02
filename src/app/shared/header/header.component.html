@@ -1,0 +1,100 @@
+<header class="main-header">
+  <nav class="nav-container">
+    <div class="nav-section left">
+      <a class="nav-item" routerLink="/">NOW EN TU HOGAR</a>
+
+      <div class="dropdown-container">
+        <!-- Click toggle para mostrar u ocultar el menú -->
+        <button class="nav-item dropdown-toggle" (click)="toggleDropdown()">
+          Productos
+        </button>
+
+        <!-- Submenú mostrado solo si dropdownOpen es true -->
+        <div class="products-horizontal-menu" *ngIf="dropdownOpen">
+          <a class="product-item" routerLink="/superficies">
+            <img src="assets/img/header/icons/baño_limpio.png" alt="Baño Limpio" />
+            <span>Baño Limpio</span>
+          </a>
+          <a class="product-item" routerLink="/pisos">
+            <img src="assets/img/header/icons/piso_reluciente.png" alt="Pisos" />
+            <span>Pisos</span>
+          </a>
+          <a class="product-item" routerLink="/ropa">
+            <img src="assets/img/header/icons/ropa_limpia_y_protegida.png" alt="Cuidado de Ropa" />
+            <span>Cuidado de Ropa</span>
+          </a>
+          <a class="product-item" routerLink="/cocina">
+            <img src="assets/img/header/icons/cocina_impecable.png" alt="Cocina Impecable" />
+            <span>Cocina Impecable</span>
+          </a>
+          <a class="product-item" routerLink="/especialidades">
+            <img src="assets/img/header/icons/productos_de_especialidad.png" alt="Especialidades" />
+            <span>Especialidades</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="logo">
+      <a routerLink="/">
+        <img src="assets/img/logo-now-blanco.png" alt="Logo" />
+      </a>
+    </div>
+
+    <div class="nav-section right">
+      <a class="nav-item" routerLink="/nosotros">QUIERO COMPRAR NOW</a>
+      <a class="nav-item instagram-icon" href="https://www.instagram.com/now_productosmx" target="_blank">
+        <img src="assets/img/instagram_logo.png" alt="Instagram" />
+      </a>
+    </div>
+  </nav>
+
+  <!-- Icono de menú móvil -->
+  <div class="mobile-menu-icon" (click)="toggleMobileMenu()" aria-label="Abrir menú">☰</div>
+
+  <!-- Menú móvil -->
+  <div>
+
+    <nav class="mobile-menu" [class.open]="mobileMenuOpen">
+      <a routerLink="/" (click)="toggleMobileMenu()">Inicio</a>
+
+      <!-- Dropdown de Productos -->
+      <div class="mobile-dropdown">
+  <span (click)="toggleDropdown()">
+    Productos <span [class.rotated]="dropdownOpen">▾</span>
+  </span>
+  <div class="mobile-dropdown-menu" [class.open]="dropdownOpen">
+    <a routerLink="/producto1" (click)="toggleMobileMenu()">
+      <img src="assets/img/header/icons/baño_limpio.png" alt="Baño Limpio" />
+      <span>Baño Limpio</span>
+    </a>
+    <a routerLink="/producto2" (click)="toggleMobileMenu()">
+      <img src="assets/img/header/icons/piso_reluciente.png" alt="Pisos" />
+      <span>Pisos</span>
+    </a>
+    <a routerLink="/producto3" (click)="toggleMobileMenu()">
+      <img src="assets/img/header/icons/ropa_limpia_y_protegida.png" alt="Cuidado de Ropa" />
+      <span>Cuidado de Ropa</span>
+    </a>
+    <a routerLink="/producto4" (click)="toggleMobileMenu()">
+      <img src="assets/img/header/icons/cocina_impecable.png" alt="Cocina Impecable" />
+      <span>Cocina Impecable</span>
+    </a>
+    <a routerLink="/producto5" (click)="toggleMobileMenu()">
+      <img src="assets/img/header/icons/productos_de_especialidad.png" alt="Especialidades" />
+      <span>Especialidades</span>
+    </a>
+  </div>
+</div>
+
+
+      <a routerLink="/nosotros" (click)="toggleMobileMenu()">Nosotros</a>
+
+      <a href="https://www.instagram.com/tu_usuario" target="_blank" rel="noopener noreferrer">
+        <img class="mobile-instagram" src="assets/img/instagram_logo.png" alt="Instagram" />
+      </a>
+    </nav>
+
+  </div>
+</header>

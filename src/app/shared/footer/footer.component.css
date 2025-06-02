@@ -1,0 +1,91 @@
+.main-footer {
+  background-color: #002e82;
+  color: white;
+  padding: 1.5rem 2rem 0.5rem;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.footer-section {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Logo izquierdo */
+.left-logo img {
+  height: 120px; /* Aumenta el tamaño del logo */
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.left-logo a img:hover {
+  transform: scale(1.4); /* Efecto zoom */
+}
+
+/* Redes sociales */
+.social-icons {
+  flex: 1;
+  justify-content: center;
+  gap: 1rem; /* Espacio entre los iconos */
+}
+
+.social-icons a img {
+  height: 80px; /* Aumenta el tamaño de los iconos */
+  transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.4); /* Efecto zoom */
+}
+
+/* Logos derechos */
+.right-logos {
+  justify-content: flex-end;
+}
+
+.right-logos img {
+  height: 120px; /* Aumenta el tamaño del logo */
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.right-logos img:hover {
+  transform: scale(1.4); /* Efecto zoom */
+}
+
+/* Copyright abajo */
+.footer-bottom {
+  text-align: center;
+  padding: 1rem 0 0.5rem;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left-logo,
+  .right-logos {
+    justify-content: center;
+  }
+
+  .footer-section {
+    justify-content: center;
+  }
+
+  .social-icons {
+    gap: 2rem; /* Más espacio entre los iconos en dispositivos pequeños */
+  }
+}

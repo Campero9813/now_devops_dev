@@ -1,0 +1,86 @@
+<section style="padding-top: 8rem; padding-bottom: 15rem" class="ae-container-fluid rk-main">
+    <div class="container">
+        <h1>Direccion de Envio</h1>
+        <p>Porfavor ingresa la direccion a la enviaremos tu pedido</p>
+        <hr />
+
+        <form class="form" #userForm="ngForm" (ngSubmit)="guardarDatosUsuario()">
+            <div class="fields fields--2">
+                <label class="field">
+                    <span class="field__label" for="nombre">Nombre</span>
+                    <input class="field__input" type="text" name="nombre" [(ngModel)]="nombre" required />
+                </label>
+                <label class="field">
+                    <span class="field__label" for="apellido">Apellido</span>
+                    <input class="field__input" type="text" name="apellido" [(ngModel)]="apellido" required />
+                </label>
+                <label class="field">
+                    <span class="field__label" for="correo">Correo</span>
+                    <input class="field__input" type="text" name="correo" [(ngModel)]="correo" required />
+                </label>
+
+                <label class="field">
+                    <span class="field__label" for="area_code">Codigo de Area</span>
+                    <input class="field__input" type="text" name="area_code" [(ngModel)]="area_code" required />
+                </label>
+                <label class="field">
+                    <span class="field__label" for="telefono">Telefono</span>
+                    <input class="field__input" type="text" name="telefono" [(ngModel)]="telefono" required />
+                </label>
+            </div>
+            <label class="field">
+                <span class="field__label" for="direccion">Direccion</span>
+                <input class="field__input" type="text" name="direccion" [(ngModel)]="direccion" required />
+            </label>
+            <label class="field">
+                <span class="field__label" for="pais">Pais</span>
+                <select class="field__input" name="pais" [(ngModel)]="pais" required>
+                    <option value=""></option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Estados Unidos">Estados Unidos</option>
+                    <option value="Canada">Canada</option>
+                </select>
+            </label>
+            <div class="fields fields--3">
+                <label class="field">
+                    <span class="field__label" for="codigo_postal">Codigo Postal</span>
+                    <input class="field__input" type="text" name="codigo_postal" [(ngModel)]="codigo_postal" required />
+                </label>
+                <label class="field">
+                    <span class="field__label" for="ciudad">Ciudad</span>
+                    <input class="field__input" type="text" name="ciudad" [(ngModel)]="ciudad" required />
+                </label>
+                <label class="field">
+                    <span class="field__label" for="esatdo">Esatdo</span>
+                    <select class="field__input" name="estado" [(ngModel)]="estado" required>
+                        <option value=""></option>
+                        <option value="CDMX">CDMX</option>
+                        <option value="Estado de Mexico">Estado de Mexico</option>
+                        <option value="Puebla">Puebla</option>
+                        <option value="Queretaro">Queretaro</option>
+                    </select>
+                </label>
+            </div>
+            <div class="fields fields--3">
+                <label class="field">
+                    <span class="field__label" for="colonia">Colonia</span>
+                    <input class="field__input" type="text" name="colonia" [(ngModel)]="colonia" required />
+                </label>
+                <label class="field">
+                    <span class="field__label" for="municipio">Municipio</span>
+                    <input class="field__input" type="text" name="municipio" [(ngModel)]="municipio" required />
+                </label>
+                <!-- <label class="field">
+                <span class="field__label" for="state">Esatdo</span>
+                <select class="field__input" name="state">
+                    <option value=""></option>
+                </select>
+            </label> -->
+            </div>
+            <button type="submit" class="button">Continuar</button>
+        </form>
+        <hr />
+        <!--  <button class="button">Continue</button> -->
+        <!-- <div *ngIf="formInvalido" class="error-message">Por favor, complete todos los campos obligatorios.</div> -->
+    </div>
+</section>

@@ -1,0 +1,81 @@
+<footer style="margin: 10px;" class="ae-container-fluid rk-footer">
+  <!-- <footer style="margin: 10px; background: rgb(16, 159, 223)" class="ae-container-fluid rk-footer"> -->
+  <div class="ae-grid ae-grid--collapse">
+    <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-left">
+      <ul class="rk-menu rk-footer-menu">
+        <li routerLinkActive="active" class="rk-menu__item-footer nav-item">
+          <a href="http://pigroup.com.mx/" target="_blank" class="rk-menu__link nav-link">Nosotros</a>
+          <!-- <a routerLink="nosotros" class="rk-menu__link nav-link">Nosotros</a> -->
+        </li>
+        <li routerLinkActive="active" class="rk-menu__item-footer nav-item">
+          <a routerLink="sucursales" class="rk-menu__link nav-link">Sucursales</a>
+        </li>
+        <li routerLinkActive="active" class="rk-menu__item-footer nav-item">
+          <a routerLink="" class="rk-menu__link nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Aviso Privacidad</a>
+        </li>
+        <li routerLinkActive="active" class="rk-menu__item-footer nav-item">
+          <!-- <a routerLink="contactanos" class="rk-menu__link nav-link">Contactanos</a> -->
+          <a routerLink="" (click)="redirectToWhats()" class="rk-menu__link nav-link">Contactanos</a>
+        </li>
+      </ul>
+      <p class="rk-footer__text rk-footer__copy">
+        <span class="ae-u-bold">Copyright © </span>
+        <span class="ae-u-bolder">Productos innovador S.A. de C.V. {{ anio }}</span>
+      </p>
+    </div>
+    <div class="prueba ae-grid__item item-lg-4 au-xs-ta-center">
+      <!-- Facebook -->
+      <a [href]="infoPaginaService.info.facebook" target="_blank" class="rk-social-btn">
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#icon-facebook"></use>
+        </svg>
+      </a>
+      <!-- Twitter -->
+      <a [href]="infoPaginaService.info.twitter" target="_blank" class="rk-social-btn ">
+        <img src="assets/img/logo-black.png">
+        <!-- <svg>
+          <use xlink:href="assets/img/symbols.svg#icon-twitter"></use>
+        </svg> -->
+      </a>
+      <!-- Instagram -->
+      <a [href]="infoPaginaService.info.instagram" target="_blank" class="rk-social-btn">
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#icon-pinterest"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right">
+      <p class="rk-footer__text rk-footer__contact">
+        <span class="ae-u-bold">Email: </span>
+        <span class="ae-u-bolder">
+          <a href="mailTo:{{ infoPaginaService.info.email }}" class="rk-dark-color">{{ infoPaginaService.info.email }}</a>
+        </span>
+      </p>
+      <p class="rk-footer__text rk-footer__by">Designed By: <a href="http://www.pigroup.com.mx/" target="_blank" class="ae-u-bolder" style="color:black;">Productos Innovador</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Launch static backdrop modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Aviso de Privacidad</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="overflow: hidden;">
+        <app-aviso-privacidad></app-aviso-privacidad>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn_aviso btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <!-- <button type="button" class="btn_aviso btn-primary">Aceptar</button> -->
+      </div>
+    </div>
+  </div>
+</div>

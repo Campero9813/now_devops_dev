@@ -1,0 +1,86 @@
+<div style="padding-top: 20rem;" id="app">
+
+    <!-- Header -->
+    <header class="container">
+        <h1>Resumen de Orden</h1>
+        <ul class="breadcrumb">
+            <li>Inicio</li>
+            <li>Carrito de Compra</li>
+        </ul>
+
+    </header>
+    <!-- End Header -->
+
+    <!-- Product List -->
+    <section class="container">
+        <div *ngIf="carrito.length === 0; else mostrarProductos">
+            <div class="empty-product ">
+                <h3>Por el momento no hay productos en el carrito.</h3>
+                <button>Comprar Ahora </button>
+            </div>
+        </div>
+        <ng-template #mostrarProductos>
+            <span class="count">{{carrito.length}} Articulos en el Carrito</span>
+            <ul class="products">
+                <li class="row" *ngFor="let productos of carrito; let i = index">
+                    <div class="col left ">
+                        <div class="thumbnail">
+                            <img src="./assets/productos_now/{{ productos.imagen_portada }}" alt="..." />
+                        </div>
+                        <div class="detail ">
+                            <div class="name ">
+                                {{ productos.nombre_producto }}
+                            </div>
+                            <div class="description ">{{productos.descripcion_corta}}</div>
+                            <div class="price ">{{ productos.precio | currency }}</div>
+                            <div class="quantity ">Cantidad: {{ productos.cantidad}}</div>
+                        </div>
+                    </div>
+
+                    <div class="col right">
+                        <!-- <div class="quantity">
+                            <input type="number" class="quantity" step="1" [(ngModel)]="productos.cantidad" />
+                            <input type="number" class="quantity" step="1" :value="productos.cantidad" @input="updateQuantity(index, $event)" @blur="checkQuantity(index, $event)" />
+                        </div> -->
+                        <div class="remove">
+                            <a class="botones_carrito btn" (click)="eliminarDelCarrito(i)">x</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <!-- Summary -->
+            <section class="container">
+                <!-- <div class="promotion">
+            <label for="promo-code">Tienes un codigo de descuento?</label>
+            <input type="text" id="promo-code" v-model="promoCode" /> <button type="button" @click=""></button>
+        </div> -->
+
+                <div class="summary">
+                    <ul>
+                        <li>Subtotal: {{subtotal | currency}} <span></span></li>
+                        <!-- <li v-if="discount > 0">Descuento: <span></span></li> -->
+                        <!-- <li>Envio:{{ envio | currency }} <span></span></li> -->
+                        <ng-container *ngIf="subtotal>=1000; else elseTemplate">
+                            <li>Envio Gratis <span></span></li>
+                        </ng-container>
+                        <ng-template #elseTemplate>
+                            <li>Envio:{{ envio | currency }} <span></span></li>
+                        </ng-template>
+                        <li class="total">Total: <span>{{ total | currency}}</span></li>
+                    </ul>
+                </div>
+
+
+
+                <div class="checkout">
+                    <a class="button-cards" routerLink="envio" (click)="datosEnvio()">Generar Pedido</a>
+                </div>
+            </section>
+            <!-- End Summary -->
+        </ng-template>
+
+    </section>
+    <!-- End Product List -->
+
+
+</div>

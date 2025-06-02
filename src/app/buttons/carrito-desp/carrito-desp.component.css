@@ -1,0 +1,31 @@
+ul {
+    list-style: none !important;
+}
+
+.ajustar-carrito {
+    margin-right: 10px;
+}
+
+
+/* Diseños para flotante */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    position: fixed;
+    bottom: 20rem;
+    left: 70rem;
+    right: 10rem;
+}
+
+@media (max-width: 40.5rem) {
+    .container {
+        position: fixed;
+        bottom: 20rem;
+        left: 5rem;
+    }
+}

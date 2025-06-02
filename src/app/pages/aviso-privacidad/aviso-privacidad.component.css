@@ -1,0 +1,25 @@
+@media screen and (min-width:620px) and (max-width:2080px) {
+  .pdf {
+      /* display: flex;
+  justify-content: center; */
+      display: flex;
+      width: 900px;
+      height: auto;
+      /* centrar vertical y horizontalmente */
+      position: relative;
+      left: 10%;
+      margin: -25px 0 0 -25px !important;
+      /* aplicar a top y al margen izquierdo un valor negativo para completar el centrado del elemento hijo */
+  }
+
+  .prueba {
+
+      margin-bottom: 100px;
+  }
+
+  .tabla_pdf {
+      border: transparent;
+      box-shadow: transparent;
+      margin: transparent;
+  }
+}

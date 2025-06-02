@@ -1,0 +1,22 @@
+iframe{
+  width: 100%;
+}
+
+h1{
+  text-align: center;
+  font-family: Lucida Bright,sans-serif;
+  color: #00B1EA;
+
+
+}
+
+h5{
+  color: #00B1EA;
+  margin-bottom: 1.5rem;
+}
+
+p{
+  font-size: 15;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}

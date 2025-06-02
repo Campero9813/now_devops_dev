@@ -1,0 +1,104 @@
+<div style="margin: 5rem;padding-top: 10rem;" class="container" id="order-container">
+    <div class="order-info">
+        <div>
+            <h1>Order detail</h1>
+        </div>
+        <!--  <div>
+            <p><span>Order number</span> 3355123</p>
+        </div> -->
+        <!-- <div>
+            <p><span>Order status</span> In transit</p>
+        </div> -->
+        <div>
+            <p><span>Nombre: </span> {{userData.nombre}} {{userData.apellido}}</p>
+        </div>
+        <div>
+            <p><span>Telefono: </span>+{{userData.area_code}} {{userData.telefono}}</p>
+        </div>
+        <div>
+            <p><span>Fecha de Compra</span> 10/11/2023</p>
+        </div>
+        <!-- <div>
+            <p><span>Shipping method</span> Ground</p>
+        </div> -->
+        <!-- <div>
+            <p>
+                <span>Tracking ID</span>
+                <a href="#" class="styled-link">1231234123412</a>
+            </p>
+        </div> -->
+
+    </div>
+    <div class="order-product">
+        <div class="order-product-info" *ngFor="let product of datosCompra">
+            <div class="order-product-img">
+                <img src="./assets/productos_now/{{ product.imagen_portada }}" alt="Ray-Ban RX5228" />
+            </div>
+            <div class="name">
+                {{ product.nombre_producto }}
+            </div>
+            <!-- <div class="description ">{{product.descripcion_corta}}</div> -->
+            <div class="price ">{{ product.precio | currency }}</div>
+            <div class="quantity ">Cantidad: {{ product.cantidad}}</div>
+        </div>
+
+    </div>
+    <div class="order-shipping-billing">
+        <!-- <div class="order-shipping-info" *ngFor="let dir of userData | keyvalue"> -->
+        <div class="order-shipping-info">
+            <div>
+                <h1>Direccion de Envio</h1>
+            </div>
+
+            <!-- <h2>Nombre: {{userData.nombre}} {{userData.apellido}}</h2> -->
+            <p>Correo: {{userData.correo}}</p>
+            <!-- <p>Telefono: {{userData.telefono}}</p> -->
+            <p>Direccion: {{userData.direccion}}</p>
+            <p>País: {{userData.pais}}</p>
+            <p>Ciudad: {{userData.ciudad}}</p>
+            <p>Codigo Postal: {{userData.codigo_postal}}</p>
+
+        </div>
+    </div>
+
+    <div class="order-total">
+        <div>
+            <h2>Total de la Orden</h2>
+        </div>
+        <div class="summary">
+            <ul>
+                <li>Subtotal: {{subtotal | currency}} <span></span></li>
+                <!-- <li v-if="discount > 0">Descuento: <span></span></li> -->
+                <!-- <li>Envio:{{ envio | currency }} <span></span></li> -->
+                <ng-container *ngIf="subtotal>=1000; else elseTemplate">
+                    <li>Envio Gratis <span></span></li>
+                </ng-container>
+                <ng-template #elseTemplate>
+                    <li>Envio:{{ envio | currency }} <span></span></li>
+                </ng-template>
+                <li class="total">Total: <span>{{ total | currency}}</span></li>
+            </ul>
+        </div>
+    </div>
+    <!-- <div class="order-print">
+        <div>
+            <p>Print a receipt for your records.</p>
+            <a href="#" class="st-button">Print</a>
+        </div>
+    </div> -->
+    <div id="wallet_container"></div>
+    <button (click)="realizarPago()">Pagar con Mercado Pago</button>
+</div>
+
+<!-- SDK MercadoPago.js -->
+<script src="https://sdk.mercadopago.com/js/v2"></script>
+<script>
+    const mp = new MercadoPago(public_key);
+    const bricksBuilder = mp.bricks();
+    console.log(mp);
+    mp.bricks().create("wallet", "wallet_container", {
+        initialization: {
+            preferenceId: "<PREFERENCE_ID>",
+        },
+    });
+</script>

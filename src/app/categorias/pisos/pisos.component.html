@@ -1,0 +1,19 @@
+<section style="padding-top: 7rem;" class="section-gallery">
+
+  <app-regresar></app-regresar>
+
+  <div style="padding-top: 1rem;" class="centrar has-animation animation-ltr" data-delay="10">
+    <p class="bigger">Limpieza de Pisos</p>
+  </div>
+
+  <div style="text-align: center; padding-top: 5rem; padding-bottom: 5rem;" class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4 has-animation animation-rtl" data-delay="1000">
+    <a *ngFor="let item of productosFiltrados" class="rk-item ae-masonry__item" [routerLink]="['/producto', item.id_producto]">
+      <div class="d-flex justify-content-center">
+        <img src="./assets/productos_now/{{item.categoria}}/{{item.nombre_carpeta}}/{{item.imagen_principal}}" alt="">
+        <div class="item-meta">
+          <h2>{{ item.nombre_producto }}</h2>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>

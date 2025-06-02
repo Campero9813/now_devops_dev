@@ -1,0 +1,33 @@
+<section style="padding-top: 7rem;" class="section-gallery">
+
+  <!-- Banner principal ocupando toda la pantalla -->
+<div class="div_banner">
+  <img src="assets/img/banners/banner_ropa/bn_ropa_impecable.jpg" alt="Imagen principal">
+</div>
+
+
+<div class="separator_section">
+  <div class="separator_line">
+    <img src="assets/img/banners/banner_ropa/ropa.png" alt="Producto">
+  </div>
+</div>
+  
+
+  <!-- Cards con productos -->
+  <div class="cards-container has-animation animation-rtl" style="padding: 5rem 2rem;" data-delay="1000">
+    <div class="card" *ngFor="let item of productosFiltrados" [routerLink]="['/producto', item.id_producto]">
+      <div class="card-img">
+        <img src="./assets/productos_now/{{item.categoria}}/{{item.nombre_carpeta}}/{{item.imagen_principal}}"
+          alt="{{ item.nombre_producto }}">
+      </div>
+      <div class="card-text">
+        <h3>{{ item.nombre_producto }}</h3>
+        <!-- <span class="card-footer">Ver tips <img src="assets/img/icons/redo.png"> </span>
+        <p>{{ item.descripcion_corta || 'Conoce más sobre este producto' }}</p> -->
+        <span class="card-footer">{{ item.descripcion_corta || 'Conoce más sobre este producto' }} <img src="assets/img/icons/arrow_outward.png"></span>
+      </div>
+    </div>
+  </div>
+
+  <app-regresar></app-regresar>
+</section>

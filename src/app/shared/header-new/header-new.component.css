@@ -1,0 +1,93 @@
+/* Estilos por defecto del menú */
+#mainNav {
+  background-color: #109FDF; /* Color de fondo sólido */
+
+  transition: background-color 0.1s ease-in-out;
+}
+
+#mainNav.scrolled {
+  background-color: rgba(16, 159, 223, 0.7); /* Color de fondo semitransparente */
+}
+
+.rk-logo1 {
+  width: 20%;
+  position: absolute;
+  top: 5%;
+  left: 40%;
+  /* margin: -25px 0 0 -25px; */
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+      display: none;
+      width: 50%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .rk-logo1 .logo-secundario {
+      /*         background-color: #f9e4b7; */
+      display: none;
+      position: relative;
+      width: 40px !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .logo-secundario {
+      width: 50%;
+      position: absolute;
+      top: 35%;
+      left: 30%;
+  }
+}
+
+.rk-menu li {
+  width: 100%;
+  padding-bottom: 1px;
+}
+
+.active {
+  padding: 2px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.active a {
+  color: black;
+}
+
+
+.rk-search input {
+  color: black !important;
+  border-radius: 1px;
+  padding: 2px;
+}
+
+.search-input{
+  border-radius: 0;
+  height: 90%;
+  width: 100%;
+}
+.search-icon {
+  width: 20px;
+  height: 20px;
+}
+.search-button {
+  border-radius: 0;
+  margin-left: 1px; /* Espacio entre el input y el botón */
+}
+/* Añade reglas de estilo responsivo para tamaños de pantalla pequeños */
+@media (max-width: 620px) {
+  .rk-search {
+    text-align: center;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+}

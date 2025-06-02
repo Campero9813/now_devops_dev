@@ -1,0 +1,100 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<section class="inicio-container">
+  <div>
+
+    <!-- Carrusel -->
+    <div id="carouselInicio" class="carousel slide" #carouselRef>
+      <div class="carousel-inner">
+
+        <!-- Slide 1: Video -->
+        <div class="carousel-item active video-header-container">
+          <video #videoRef class="carousel-media" muted playsinline preload="auto" autoplay>
+            <source src="assets/videos/banner_2.mp4" type="video/mp4"/>
+            Tu navegador no soporta videos HTML5.
+          </video>
+        </div>
+
+        <!-- Slide 2: Imagen -->
+        <div class="carousel-item carousel-image-container">
+          <img src="assets/img/banners/banner_home/bn1_sala_limpia.jpg" class="carousel-media" alt="Imagen 1">
+        </div>
+
+        <!-- Slide 3: Imagen -->
+        <div class="carousel-item carousel-image-container">
+          <img src="assets/img/banners/banner_home/bn2_limpiadores_multiusos.jpg" class="carousel-media" alt="Imagen 2">
+        </div>
+
+      </div>
+
+      <!-- Controles -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselInicio" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselInicio" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+
+    <!-- Separador con texto -->
+    <div class="separator-section">
+      <div class="separator-line">
+        <span>NOW EN TU HOGAR</span>
+      </div>
+    </div>
+
+    <!-- Imagen centrada -->
+    <div class="centered-image-section">
+      <img src="assets/img/banners/banner_home/banner_familia.jpg" alt="Imagen destacada hogar" class="centered-image">
+    </div>
+
+    <!-- Cards -->
+
+    <div class="cards-container">
+      <div class="card"  #card (click)="toggleFlip(card)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="assets/img/banners/cards/ropa_blanca.jpg" alt="Tips de Cuidado">
+            <span class="card-footer">Da click para mas información <img src="assets/img/icons/redo.png"> </span>
+          </div>
+          <div class="card-back">
+            <h3>TIPS DE CUIDADO</h3>
+            <p>Con este pequeño ciclo de lavado, puedes evitar que tu ropa blanca se tiña de amarillo
+          </div>
+        </div>
+      </div>
+
+      <div class="card"  #card (click)="toggleFlip(card)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="assets/img/banners/cards/ropa_de_color.jpg" alt="El poder de">
+            <span class="card-footer">Da click para mas información <img src="assets/img/icons/redo.png"> </span>
+          </div>
+          <div class="card-back">
+            <h3>EL PODER DE</h3>
+            <p>Nos encanta ser tu aliado para mantener tu ropa siempre limpia. Te compartimos algunos</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card"  #card (click)="toggleFlip(card)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="assets/img/banners/cards/mascotas_felices.jpg" alt="Espacio limpio para mi mascota">
+            <span class="card-footer">Da click para mas información <img src="assets/img/icons/redo.png"> </span>
+          </div>
+          <div class="card-back">
+            <h3>ESPACIO LIMPIO PARA MI MASCOTA</h3>
+            <p>Te recomendamos esta rutina de cuidado y limpieza para mantener limpios y desinfectados la camita, juguetes
+              y accesorios de tu fiel amigo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+</section>

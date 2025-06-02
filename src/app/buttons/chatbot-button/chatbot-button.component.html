@@ -1,0 +1,7 @@
+<button class="floating-button" (click)="toggleChatbot()">
+  <span>Chatbot</span>
+</button>
+
+<div class="chatbot-container" *ngIf="chatbotVisible">
+  <app-chatbot></app-chatbot>
+</div>

@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<section *ngIf="producto">
+
+  <!-- Banner principal ocupando toda la pantalla -->
+  <div class="div_banner">
+    <img src="assets/productos_now/{{producto.categoria}}/{{ producto.nombre_carpeta }}/{{producto.imagen_portada}}"
+      alt="Imagen principal">
+  </div>
+
+  <!-- Texto Justificado y Centrado -->
+  <div class="descripcion-general">
+    <p class="textJustify centrado texto-intro texto-grande">
+      {{ producto.descripcion_corta }}
+    </p>
+  </div>
+
+<div class="separator_section">
+  <div class="separator_line">
+    <img src="assets/productos_now/{{producto.categoria}}/{{ producto.nombre_carpeta }}/{{producto.imagen_1}}" alt="Producto">
+  </div>
+</div>
+
+
+  <!-- Sección con imagen grande y texto -->
+  <div class="seccion-detalle-producto">
+    <div class="imagen-producto">
+      <img class="imagen-grande"
+        src="assets/productos_now/{{producto.categoria}}/{{ producto.nombre_carpeta }}/{{producto.imagen_principal}}"
+        alt="Producto">
+    </div>
+    <!-- Caracteristicas -->
+    <div class="texto-caracteristicas">
+      <ul>
+        <li *ngFor="let punto of producto.caracteristicas.split(',')">
+          {{ punto.trim() }}
+        </li>
+      </ul>
+
+      <!-- Dos botones debajo del texto -->
+      <div class="botones-secundarios">
+        <button class="sugerencia" [ngStyle]="{ 'background-color': producto.color } ">Sugerencia de uso</button>
+        <button class="comprar_now">Quiero Comprar NOW</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Botón para regresar al inicio -->
+  <div class="volver-inicio">
+    <app-regresar></app-regresar>
+    <button class="btn btn-primary" routerLink="/inicio">
+      <span class="material-symbols-outlined">
+        home
+      </span>
+    </button>
+  </div>
+</section>

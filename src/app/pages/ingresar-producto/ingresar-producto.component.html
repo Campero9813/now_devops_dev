@@ -1,0 +1,100 @@
+<!-- <div style="padding-top: 10rem;">
+    <form (submit)="enviarForm()" method="POST">
+        <div>
+
+            <label for="">Ingrese el nombre del producto</label>
+            <input [(ngModel)]="nombre" name="nombre" type="text" id="nombre" placeholder="ingrese un nombre">
+
+        </div>
+
+        <div>
+            <label for="">Ingrese la clave del producto</label>
+            <input [(ngModel)]="clave" name="clave" type="text" id="clave" placeholder="Ingrese una clave">
+
+        </div>
+
+        <div>
+            <label for="">Ingrese el precio del producto</label>
+            <input [(ngModel)]="precio" name="precio" type="text" id="precio" placeholder="ingrese un precio">
+        </div>
+
+        <div>
+            <label for="">Ingresa la categoria del producto</label>
+            <input [(ngModel)]="categoria" name="categoria" type="text" id="categoria" placeholder="Ingrese una categoria">
+        </div>
+        <div>
+            <label for="">Ingrese una Descripcion para el producto</label>
+            <input [(ngModel)]="descripcion" name="descripcion" type="text" id="descripcion" placeholder="Ingrese una descripcion">
+        </div>
+        <div style="display:none;">
+            <label for="">ingresa una foto para el producto</label>
+            <input [(ngModel)]="url" name="url" type="text" id="url" placeholder="Ingresa una foto" value="project-1">
+        </div>
+        <div>
+            <label for="">Ingresa el Stock para el producto</label>
+            <input [(ngModel)]="stock" name="stock" type="text" id="stock" placeholder="Ingresa el stock">
+        </div>
+        
+        <div>
+            <button type="submit" class="btn btn-primary btn-lg">Guardar</button>
+        </div>
+
+    </form>
+
+</div> -->
+
+
+
+<div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>Registra un nuevo productos</h3>
+                    <form (submit)="enviarForm()" method="POST" class="requires-validation" novalidate>
+
+                        <div class="col-md-12">
+                            <label for="">Ingrese el nombre del producto</label>
+                            <input class="form-control" [(ngModel)]="nombre" name="nombre" type="text" id="nombre" placeholder="ingrese un nombre" required>
+
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="">Ingrese la clave del producto</label>
+                            <input class="form-control" [(ngModel)]="clave" name="clave" type="text" id="clave" placeholder="Ingrese una clave" required>
+
+                        </div>
+                        <div class="col-md-12">
+                            <label for="">Ingrese el precio del producto</label>
+                            <input class="form-control" [(ngModel)]="categoria" name="categoria" type="text" id="categoria" placeholder="Ingrese una categoria" required>
+
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="">Ingresa la categoria del producto</label>
+                            <input class="form-control" [(ngModel)]="precio" name="precio" type="text" id="precio" placeholder="ingrese un precio" required>
+
+                        </div>
+                        <div class="col-md-12">
+                            <label for="">ingresa una foto para el producto</label>
+                            <input class="form-control" [(ngModel)]="url" name="url" type="text" id="url" placeholder="Ingresa una foto" value="project-1" required>
+
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="">Ingrese una Descripcion para el producto</label>
+                            <input class="form-control" [(ngModel)]="descripcion" name="descripcion" type="text" id="descripcion" placeholder="Ingrese una descripcion">
+
+                        </div>
+
+
+
+                        <div>
+                            <button type="submit" class="btn btn-primary btn-lg">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

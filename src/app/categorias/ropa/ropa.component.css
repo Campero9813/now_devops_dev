@@ -1,0 +1,158 @@
+/* Banner */
+.div_banner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.div_banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* === TEXTO CENTRADO Y TIPOGRAFÍA === */
+body {
+  font-family: "Montserrat" !important;
+  text-align: center;
+}
+.centrar {
+  display: flex;
+  justify-content: center;
+}
+.bigger {
+  margin: 0;
+  font-size: 60px;
+  /* font-weight: 800; */
+  padding: 20px;
+  text-transform: uppercase;
+  color: #202020;
+  display: inline-block;
+  position: relative;
+}
+.textJustify {
+  text-align: justify;
+}
+.text {
+  max-width: 600px;
+  width: 100%;
+  line-height: 24px;
+  color: #404040;
+  padding: 20px;
+}
+.text.txt-center {
+  text-align: center;
+}
+.text a {
+  color: #00B1EA;
+}
+
+
+/* === BOTÓN CARD === */
+.button-cards {
+  background-color: #009fe3;
+  /* border: none; */
+  /* border-radius: 3px; */
+  color: white;
+  padding: 5px 10px;
+  margin: 2px;
+  font-size: 16px;
+  text-align: center;
+  display: inline-block;
+}
+
+/* === NUEVO DISEÑO DE CARDS DE PRODUCTOS === */
+/* Cards */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: transparent !important;
+  width: 400px;
+  /* background-color: #fff; */
+  border-radius: 20px;
+  border: none;
+  /* overflow: hidden; */
+  /* box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08); */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  
+}
+
+.card:hover {
+  transform: translateY(-45px);
+}
+
+.card-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* border-radius: 20px 20px 0 0; */
+  /* border: none; */
+  /* object-fit: cover; */
+}
+
+.card-text {
+  background: transparent !important;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-text h3 {
+  color: #009de1;
+  font-size: 16px;
+  font-weight: bold;
+  /* margin-bottom: 10px; */
+  /* text-transform: uppercase; */
+}
+
+.card-text span {
+  font-family: "Montserrat" !important;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+  align-items: center;
+  gap: 5px;
+  border: none;
+}
+
+.card-footer img {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+
+/* Separador */
+.separator_section {
+  width: 100vw;
+  height: 20vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 5rem 0; /* Agrega espacio arriba y abajo */
+}
+
+.separator_line {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.separator_line img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
